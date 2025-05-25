@@ -76,9 +76,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInput = document.querySelector('.chat-input input');
     const chatSendButton = document.querySelector('.chat-input button');
     const chatMessagesContainer = document.querySelector('.chat-messages');
-    const auraAvatarSrc = document.querySelector('.aura-message .chat-avatar')?.src; // Get Aura's avatar
+    const epicTechAIDev2_0AvatarSrc = document.querySelector('.aura-message .chat-avatar')?.src; // Get Epic tech AI dev 2.0's avatar
 
-    if (chatInput && chatSendButton && chatMessagesContainer && auraAvatarSrc) {
+    if (chatInput && chatSendButton && chatMessagesContainer && epicTechAIDev2_0AvatarSrc) {
         chatSendButton.addEventListener('click', ()_ => {
             const userText = chatInput.value.trim();
             if (userText) {
@@ -89,18 +89,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 chatMessagesContainer.appendChild(userMessageDiv);
                 chatInput.value = ''; // Clear input
 
-                // Simulate Aura's response
+                // Simulate Epic tech AI dev 2.0's response
                 setTimeout(() => {
                     const auraResponseDiv = document.createElement('div');
                     auraResponseDiv.classList.add('message', 'aura-message');
-                    let auraResponseText = "I'm processing your request... This is a conceptual demonstration. For a full interaction, please await the AuraConnect platform launch!";
+                    let auraResponseText = "I'm processing your request... This is a conceptual demonstration. For a full interaction, please await the Epic tech AI dev 2.0 platform launch!";
                     if (userText.toLowerCase().includes("hello") || userText.toLowerCase().includes("hi")) {
                         auraResponseText = "Hello there! How can I assist you conceptually today?";
                     } else if (userText.toLowerCase().includes("report")) {
                         auraResponseText = "Generating a conceptual report. Imagine intricate holographic data visualizations appearing before you now!";
                     }
                     auraResponseDiv.innerHTML = `
-                        <img src="${auraAvatarSrc}" alt="Aura Avatar" class="chat-avatar">
+                        <img src="${epicTechAIDev2_0AvatarSrc}" alt="Epic tech AI dev 2.0 Avatar" class="chat-avatar">
                         <p>${auraResponseText}</p>
                     `;
                     chatMessagesContainer.appendChild(auraResponseDiv);

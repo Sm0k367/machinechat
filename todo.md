@@ -1,4 +1,4 @@
-# AuraConnect: Chat Bot Platform - Conceptual Design
+# Epic tech AI dev 2.0: Chat Bot Platform - Conceptual Design
 
 ## Phase 1: Core Visual Identity
 - [x] Generate the photorealistic image of the "Epic Tech AI Dev 2.0" chatbot based on the detailed prompt.
@@ -8,8 +8,8 @@
     - [x] Header (Logo, Navigation)
     - [x] Hero Section (featuring the AI chatbot image, headline, CTA)
     - [x] "Platform Highlights" Section (key features with futuristic icons/visuals)
-    - [x] "Experience AuraConnect" Section (mockup of the AR chat interface)
-    - [x] "Why AuraConnect?" Section (emphasizing timeless design, UI/UX)
+    - [x] "Experience Epic tech AI dev 2.0" Section (mockup of the AR chat interface)
+    - [x] "Why Epic tech AI dev 2.0?" Section (emphasizing timeless design, UI/UX)
     - [x] "Get Started" / Call to Action Section
     - [x] Footer
 - [x] Develop CSS (`style.css`) for a futuristic, "million dollar" aesthetic:
