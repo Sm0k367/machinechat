@@ -39,6 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Hamburger Menu Toggle
+    const hamburgerButton = document.querySelector('.hamburger-menu');
+    const mainNavLinks = document.getElementById('main-nav-links');
+
+    if (hamburgerButton && mainNavLinks) {
+        hamburgerButton.addEventListener('click', () => {
+            mainNavLinks.classList.toggle('active');
+            hamburgerButton.classList.toggle('open');
+            const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true' || false;
+            hamburgerButton.setAttribute('aria-expanded', !isExpanded);
+        });
+
+        // Optional: Close menu when a link is clicked (useful for single-page apps)
+        mainNavLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNavLinks.classList.contains('active')) {
+                    mainNavLinks.classList.remove('active');
+                    hamburgerButton.classList.remove('open');
+                    hamburgerButton.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+    }
 
     // Intersection Observer for animations on scroll
     const animatedElements = document.querySelectorAll('.feature-card, .hero-text, .hero-image-container, .why-us-text, .why-us-visual, .ar-mockup-container');
@@ -76,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatInput = document.querySelector('.chat-input input');
     const chatSendButton = document.querySelector('.chat-input button');
     const chatMessagesContainer = document.querySelector('.chat-messages');
-    const epicTechAIDev2_0AvatarSrc = document.querySelector('.aura-message .chat-avatar')?.src; // Get Epic tech AI dev 2.0's avatar
+    const epicTechAIDev2_0AvatarSrc = document.querySelector('.ai-message .chat-avatar')?.src; // Get Epic tech AI dev 2.0's avatar
 
     if (chatInput && chatSendButton && chatMessagesContainer && epicTechAIDev2_0AvatarSrc) {
         chatSendButton.addEventListener('click', ()_ => {
@@ -92,7 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Simulate Epic tech AI dev 2.0's response
                 setTimeout(() => {
                     const auraResponseDiv = document.createElement('div');
-                    auraResponseDiv.classList.add('message', 'aura-message');
+                    auraResponseDiv.classList.add('message', 'ai-message');
                     let auraResponseText = "I'm processing your request... This is a conceptual demonstration. For a full interaction, please await the Epic tech AI dev 2.0 platform launch!";
                     if (userText.toLowerCase().includes("hello") || userText.toLowerCase().includes("hi")) {
                         auraResponseText = "Hello there! How can I assist you conceptually today?";
