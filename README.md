@@ -13,3 +13,17 @@ This repository contains the following files:
 *   **`vercel.json`**: Configuration file for deploying the site to Vercel. It specifies that this is a static website.
 *   **`LICENSE`**: Contains the license information for the project.
 *   **`todo.md`**: A markdown file outlining the conceptual design and development phases of the landing page.
+
+## Deploying to GitHub Pages
+
+You can host this website for free using GitHub Pages. Here's how:
+
+1.  **Navigate to Repository Settings**: Go to the main page of your repository on GitHub. Click on the "Settings" tab.
+2.  **Go to Pages Section**: In the left sidebar, click on "Pages".
+3.  **Configure Deployment Source**:
+    *   Under "Build and deployment", ensure the "Source" is set to "Deploy from a branch".
+    *   Under "Branch", select your main branch (commonly `main` or `master`) and choose the `/ (root)` folder.
+4.  **Save Changes**: Click "Save".
+5.  **Access Your Site**: After a few minutes, your site should be live at `https://<your-username>.github.io/<repository-name>/`. (Replace `<your-username>` and `<repository-name>` with your actual GitHub username and repository name).
+
+Your `index.html` file will be the homepage.
