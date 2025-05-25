@@ -10,7 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             if (targetId.length > 1) {
                 let targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
+                    const headerOffset = document.querySelector('header').offsetHeight + 10; // 10px buffer
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
 
@@ -31,7 +36,12 @@ document.addEventListener('DOMContentLoaded', () => {
              if (targetId.length > 1) {
                 let targetElement = document.querySelector(targetId);
                 if (targetElement) {
-                    targetElement.scrollIntoView({
+                    const headerOffset = document.querySelector('header').offsetHeight + 10; // 10px buffer
+                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
                         behavior: 'smooth'
                     });
                 }
